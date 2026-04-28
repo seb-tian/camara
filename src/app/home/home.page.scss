@@ -254,12 +254,9 @@ ion-button[fill="outline"] {
     height: 300px;
   }
 }
-
-// Estilo para el contenedor de la foto con efecto de zoom
 .preview-section {
   position: relative;
   
-  // Indicador de éxito
   &::after {
     content: '✓';
     position: absolute;
@@ -292,8 +289,6 @@ ion-button[fill="outline"] {
     transform: scale(1);
   }
 }
-
-// Mejora en la accesibilidad
 .camera-button,
 ion-button[fill="outline"] {
   cursor: pointer;
@@ -303,13 +298,10 @@ ion-button[fill="outline"] {
     --box-shadow: 0 0 0 4px rgba(var(--ion-color-primary-rgb), 0.4);
   }
 }
-
-// Estilo para scroll suave
 ion-content {
   --background: var(--ion-background-color);
 }
 
-// Animación de entrada para las cards
 .photo-card {
   animation: cardGlow 0.8s ease-out;
 }

@@ -9,7 +9,7 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 })
 export class HomePage {
 
-  foto: string | null = null; // Cambiado de undefined a null para mejor manejo
+  foto: string | null = null; 
 
   constructor() {}
 
@@ -18,21 +18,19 @@ export class HomePage {
       const image = await Camera.getPhoto({
         quality: 90,
         allowEditing: false,
-        resultType: CameraResultType.DataUrl, // Cadena base64 para mostrar fácilmente
-        source: CameraSource.Camera // Abre la cámara directamente
+        resultType: CameraResultType.DataUrl, 
+        source: CameraSource.Camera 
       });
 
-      // Guardamos el resultado en nuestra variable
-      this.foto = image.dataUrl ?? null; // Usamos nullish coalescing por si acaso
+     
+      this.foto = image.dataUrl ?? null; 
       
     } catch (error) {
       console.error('Error al tomar la foto', error);
-      // Opcional: Mostrar un mensaje al usuario
-      // await this.showToast('Error al capturar la foto');
+      
     }
   }
 
-  // Método para limpiar la foto (agregado)
   limpiarFoto() {
     this.foto = null;
   }
