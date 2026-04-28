@@ -6,13 +6,12 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="camera-container">
-    <!-- Botón principal más vistoso -->
+   
     <ion-button expand="block" color="secondary" (click)="tomarFoto()" class="camera-button">
       <ion-icon name="camera" slot="start"></ion-icon>
       Capturar imagen
     </ion-button>
 
-    <!-- Vista previa de la foto -->
     <div *ngIf="foto" class="preview-section">
       <ion-card class="photo-card">
         <ion-card-header>
@@ -27,14 +26,12 @@
         </ion-card-content>
       </ion-card>
 
-      <!-- Botones adicionales opcionales -->
       <ion-button expand="block" fill="outline" (click)="limpiarFoto()" color="medium">
         <ion-icon name="trash" slot="start"></ion-icon>
         Limpiar foto
       </ion-button>
     </div>
 
-    <!-- Mensaje cuando no hay foto -->
     <div *ngIf="!foto" class="empty-state">
       <ion-icon name="images-outline" class="empty-icon"></ion-icon>
       <p>No hay fotos capturadas aún</p>
